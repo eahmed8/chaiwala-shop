@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaiwala Shop | Authentic Chai Experience</title>
+    
+    <!-- Links to the CSS file -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Fonts used by Deccan Morsels (Jost & Roboto) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <nav class="nav-left">
+            <a href="#">Home</a>
+            <a href="#">Our Story</a>
+            <a href="#">Locations</a>
+        </nav>
+
+        <div class="logo-container">
+            <div class="logo-text">CHAIWALA</div>
+        </div>
+
+        <nav class="nav-right">
+            <a href="#">Menu</a>
+            <a href="#">Catering</a>
+            <!-- Inline style used here for the specific accent border -->
+            <a href="#" style="border-bottom: 1px solid #D4A056;">Order Online</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-subtitle">EST. 2025 • FREMONT, CALIFORNIA</span>
+            <h1>SIP THE SOUL <br> OF INDIA</h1>
+            <a href="#" class="btn-elegant">EXPLORE OUR MENU</a>
+        </div>
+    </section>
+
+    <!-- MENU SECTION -->
+    <section class="menu-section">
+        <div class="section-header">
+            <h2 class="section-title">Deccan Favorites</h2>
+            <p style="margin-top: 15px; color: #666; font-size: 18px;">Curated flavors from the streets of Hyderabad.</p>
+        </div>
+        
+        <div class="menu-grid">
+            <!-- Menu Item 1 -->
+            <div class="menu-item">
+                <div class="image-frame">
+                    <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?q=80&w=1000&auto=format&fit=crop" alt="Irani Chai">
+                </div>
+                <h3>Irani Chai</h3>
+                <p>Thick, creamy, and brewed to perfection.</p>
+                <span class="price">$3.99</span>
+            </div>
+
+            <!-- Menu Item 2 -->
+            <div class="menu-item">
+                <div class="image-frame">
+                    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=1000&auto=format&fit=crop" alt="Osmania Biscuits">
+                </div>
+                <h3>Osmania Biscuits</h3>
+                <p>The perfect buttery companion to your tea.</p>
+                <span class="price">$5.50</span>
+            </div>
+
+            <!-- Menu Item 3 -->
+            <div class="menu-item">
+                <div class="image-frame">
+                    <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=1000&auto=format&fit=crop" alt="Hyderabadi Maggi">
+                </div>
+                <h3>Hyderabadi Maggi</h3>
+                <p>Spicy street-style noodles with veggies.</p>
+                <span class="price">$8.95</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Chaiwala Shop. Designed in the spirit of Deccan Morsels.</p>
+    </footer>
+
+    <!-- JAVASCRIPT FOR HEADER SCROLL EFFECT -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+</body>
+</html>
