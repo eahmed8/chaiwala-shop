@@ -4,66 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Chaiwala Shop</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Jost:wght@300;400;500;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- HEADER (Same as Home) -->
+    <!-- HEADER -->
     <header>
         <nav class="nav-left">
-            <a href="index.html">Home</a>
-            <a href="about.html" style="color:var(--accent-gold)">About</a>
-            <a href="contact.html">Contact</a>
+            <a href="index.html" class="nav-link">HOME</a>
+            <a href="about.html" class="nav-link" style="color:var(--accent-gold)">ABOUT</a>
+            <a href="contact.html" class="nav-link">CONTACT</a>
         </nav>
         <div class="logo-center">
-            <div class="logo-text">CHAIWALA</div>
+            <div class="logo-text">DECCAN</div>
+            <div class="est-text">EST 2023 • MORSELS</div>
         </div>
-        <div class="nav-right">
-            <a href="#" class="btn-header">ORDER ONLINE</a>
-        </div>
+        <a href="#" class="btn-order">ORDER ONLINE</a>
     </header>
 
-    <!-- HERO -->
-    <section class="page-hero">
-        <h1 class="page-title">OUR STORY</h1>
+    <!-- PAGE TITLE -->
+    <section class="page-header-section">
+        <p style="color:var(--text-grey); font-family:var(--font-script); font-size:30px;">Our Heritage</p>
+        <h1 class="page-title-large">THE CHAIWALA STORY</h1>
     </section>
 
-    <!-- CONTENT -->
-    <section class="about-section">
-        
-        <!-- Row 1: Text Left, Image Right -->
-        <div class="about-row">
-            <div class="about-text">
-                <h2>The Chaiwala Legacy</h2>
-                <p>Inspired by the bustling streets of Hyderabad and the serene tea gardens of Assam, Chaiwala Shop was born out of a desire to bring authentic, high-quality chai to the modern world.</p>
-                <p>We don't just brew tea; we craft experiences. Every cup is a tribute to the "Deccan" way of life—slow, deliberate, and full of flavor. From our signature Osmania biscuits to our spicy samosas, every item on our menu tells a story of tradition.</p>
-            </div>
-            <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1596710629170-e69f64be2387?q=80&w=1000&auto=format&fit=crop" alt="Pouring Chai">
-            </div>
+    <!-- STORY SECTION 1 -->
+    <section class="about-grid">
+        <div class="about-text">
+            <h2>ROOTED IN TRADITION</h2>
+            <p>Inspired by the bustling streets of Hyderabad and the serene tea gardens of Assam, Chaiwala Shop was born out of a desire to bring authentic, high-quality chai to the modern world.</p>
+            <p>We believe that chai is not just a drink; it's a ritual. It's the pause in a busy day, the conversation starter, and the comfort of home. Every cup we brew is a tribute to the Deccan way of life.</p>
         </div>
-
-        <!-- Row 2: Image Left, Text Right (Reverse) -->
-        <div class="about-row reverse">
-            <div class="about-text">
-                <h2>Interested in Joining?</h2>
-                <p>With the enormous amount of support from fellow chai lovers, we are looking to expand the Chaiwala family. To simply put it, our mission is to introduce people to new tastes and make them part of our community.</p>
-                <p>Although we may be small, we are never short in serving our customers quality products. We are more than happy to have you here.</p>
-                <a href="contact.html" class="btn-submit" style="text-decoration:none; display:inline-block;">WORK WITH US</a>
-            </div>
-            <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=1000&auto=format&fit=crop" alt="Chaiwala Team">
-            </div>
+        <div class="about-img-container">
+            <img src="https://images.unsplash.com/photo-1596710629170-e69f64be2387?q=80&w=1000" class="about-arch-img" alt="Pouring Chai">
         </div>
-
     </section>
 
-    <!-- FOOTER -->
+    <!-- STORY SECTION 2 (Reverse) -->
+    <section class="about-grid reverse">
+        <div class="about-text">
+            <h2>CRAFTED FOR YOU</h2>
+            <p>Our chefs use age-old recipes passed down through generations. From the slow-cooked Haleem to the crisp, buttery Osmania biscuits, we ensure every bite transports you back to the royal kitchens of the Nizams.</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Vegetarian_Samosa.jpg/1200px-Vegetarian_Samosa.jpg" style="width:100px; border-radius:50%; border:2px solid var(--accent-gold); margin-top:20px;" alt="Samosa Badge">
+        </div>
+        <div class="about-img-container">
+            <img src="https://images.unsplash.com/photo-1567332267232-a5e12e11833c?q=80&w=1000" class="about-arch-img" alt="Spices">
+        </div>
+    </section>
+
+    <!-- FOOTER (Same as Index) -->
     <footer>
-        <p>&copy; 2025 Chaiwala Shop.</p>
+        <div class="footer-logo-large">
+            <span style="font-family:'Jost'; font-size:40px; color:var(--accent-gold); letter-spacing:5px;">DECCAN MORSELS</span>
+        </div>
+        <div class="copyright">
+            <p>Deccan Morsels | All rights reserved</p>
+        </div>
     </footer>
 
 </body>

@@ -4,77 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Chaiwala Shop</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Jost:wght@300;400;500;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!-- HEADER -->
     <header>
         <nav class="nav-left">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html" style="color:var(--accent-gold)">Contact</a>
+            <a href="index.html" class="nav-link">HOME</a>
+            <a href="about.html" class="nav-link">ABOUT</a>
+            <a href="contact.html" class="nav-link" style="color:var(--accent-gold)">CONTACT</a>
         </nav>
         <div class="logo-center">
-            <div class="logo-text">CHAIWALA</div>
+            <div class="logo-text">DECCAN</div>
+            <div class="est-text">EST 2023 • MORSELS</div>
         </div>
-        <div class="nav-right">
-            <a href="#" class="btn-header">ORDER ONLINE</a>
-        </div>
+        <a href="#" class="btn-order">ORDER ONLINE</a>
     </header>
 
-    <!-- CONTACT WRAPPER (Split Layout) -->
-    <div class="contact-wrapper">
+    <!-- PAGE TITLE -->
+    <section class="page-header-section">
+        <p style="color:var(--text-grey); font-family:var(--font-script); font-size:30px;">Get in Touch</p>
+        <h1 class="page-title-large">CONTACT US</h1>
+    </section>
+
+    <!-- CONTACT CONTAINER -->
+    <div class="contact-section">
         
-        <!-- LEFT SIDE: INFO (Deep Green) -->
-        <div class="contact-info-side">
-            <h2 class="contact-heading">CONTACT INFORMATION</h2>
-            
-            <div class="info-block">
-                <span class="info-label">ADDRESS</span>
-                <p class="info-text">1015 S. Paseo Blvd, #103<br>Fremont, CA 94539</p>
+        <!-- Left: Info -->
+        <div class="contact-info">
+            <div class="info-item">
+                <span class="info-label">VISIT US</span>
+                <p class="info-value">1015 S. Paseo Blvd, #103<br>Fremont, CA 94539</p>
             </div>
-
-            <div class="info-block">
-                <span class="info-label">HOURS</span>
-                <p class="info-text">Mon - Sat: 10:00 AM - 10:00 PM<br>Sun: 10:00 AM - 8:00 PM</p>
+            <div class="info-item">
+                <span class="info-label">EMAIL US</span>
+                <p class="info-value">hello@chaiwalashop.com</p>
             </div>
-
-            <div class="info-block">
-                <span class="info-label">CONTACT</span>
-                <p class="info-text">(510) 555-0199<br>hello@chaiwalashop.com</p>
+            <div class="info-item">
+                <span class="info-label">CALL US</span>
+                <p class="info-value">(510) 555-0199</p>
             </div>
-
-            <!-- Static Map Image simulating the screenshot -->
-            <div class="map-container"></div>
+            <div class="info-item">
+                <span class="info-label">OPENING HOURS</span>
+                <p class="info-value">Mon - Sun: 11 AM - 11 PM</p>
+            </div>
         </div>
 
-        <!-- RIGHT SIDE: FORM (White) -->
-        <div class="contact-form-side">
-            <h2 class="form-title">GET IN TOUCH</h2>
-            <p class="form-subtitle">Thank you for taking the time to talk to us! We will try to get in touch with you as soon as possible.</p>
-
-            <form action="#">
+        <!-- Right: Form -->
+        <div class="contact-form">
+            <form>
                 <div class="form-group">
-                    <input type="text" class="styled-input" placeholder="Name*">
+                    <input type="text" class="dark-input" placeholder="Your Name">
                 </div>
-
                 <div class="form-group">
-                    <input type="email" class="styled-input" placeholder="E-mail*">
+                    <input type="email" class="dark-input" placeholder="Your Email">
                 </div>
-
                 <div class="form-group">
-                    <input type="text" class="styled-input" placeholder="Subject*">
+                    <input type="text" class="dark-input" placeholder="Subject">
                 </div>
-
                 <div class="form-group">
-                    <textarea class="styled-input" placeholder="Message*"></textarea>
+                    <textarea class="dark-input" rows="4" placeholder="Message"></textarea>
                 </div>
-
-                <button type="submit" class="btn-submit">SUBMIT MESSAGE</button>
+                <button type="submit" class="btn-order" style="border:none; cursor:pointer; margin-top:20px;">SEND MESSAGE</button>
             </form>
         </div>
 
@@ -82,7 +77,12 @@
 
     <!-- FOOTER -->
     <footer>
-        <p>&copy; 2025 Chaiwala Shop.</p>
+        <div class="footer-logo-large">
+            <span style="font-family:'Jost'; font-size:40px; color:var(--accent-gold); letter-spacing:5px;">DECCAN MORSELS</span>
+        </div>
+        <div class="copyright">
+            <p>Deccan Morsels | All rights reserved</p>
+        </div>
     </footer>
 
 </body>
