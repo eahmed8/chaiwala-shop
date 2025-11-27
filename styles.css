@@ -403,3 +403,77 @@ footer {
     .contact-section { flex-direction: column; }
     .about-arch-img { height: 350px; }
 }
+/* =========================================
+   6. TESTIMONIALS SECTION
+   ========================================= */
+.testimonials-section {
+    padding: 100px 50px;
+    background-color: #041a15; /* Slightly darker than main body */
+    text-align: center;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.review-card {
+    background-color: var(--bg-dark);
+    border: 1px solid rgba(197, 160, 101, 0.2); /* Faint Gold Border */
+    padding: 50px 30px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-gold);
+}
+
+/* Gold Quote Icon */
+.quote-icon {
+    font-size: 40px;
+    color: var(--accent-gold);
+    opacity: 0.3;
+    margin-bottom: 20px;
+    font-family: serif;
+}
+
+.stars {
+    color: var(--accent-gold);
+    font-size: 18px;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+}
+
+.review-text {
+    font-family: var(--font-body); /* Or use Dancing Script for fancy look */
+    font-size: 16px;
+    font-style: italic;
+    color: #d1d1d1;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.reviewer-info {
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding-top: 20px;
+}
+
+.reviewer-name {
+    color: var(--accent-gold);
+    font-family: var(--font-heading);
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.reviewer-location {
+    display: block;
+    font-size: 11px;
+    color: #666;
+    margin-top: 5px;
+}
