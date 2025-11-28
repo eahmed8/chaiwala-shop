@@ -80,33 +80,40 @@ header {
 /* =========================================
    BUTTON STYLE (Unified Size)
    ========================================= */
+
 .btn-order {
-    display: inline-block; /* Ensures consistent size everywhere */
+    /* Ensures the button only takes up as much space as the text needs */
+    display: inline-block;
+    width: fit-content; 
+    
+    /* Colors */
     background-color: var(--accent-gold);
     color: white;
     
-    /* Exact sizing from Header */
+    /* Exact sizing to match the header look */
     padding: 12px 30px; 
     border-radius: 50px; 
     
     /* Typography */
     text-decoration: none;
     font-family: var(--font-heading);
-    font-size: 12px; 
-    font-weight: 600;
-    letter-spacing: 1.5px;
+    font-size: 11px; /* Slightly smaller font for a premium look */
+    font-weight: 700;
+    letter-spacing: 2px;
     text-transform: uppercase;
+    line-height: 1; /* Ensures text is vertically centered without extra height */
     
     /* Animation & Reset */
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Subtle premium shadow */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
+    white-space: nowrap; /* Prevents text from breaking into two lines */
 }
 
 .btn-order:hover {
     transform: translateY(-2px);
-    background-color: #b08d5e; /* Slightly darker gold on hover */
+    background-color: #b08d5e; 
 }
 /* =========================================
    3. HERO / JOURNEY SECTION (Wider Image)
