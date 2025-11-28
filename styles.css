@@ -34,7 +34,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 20px 50px;
+    padding: 15px 50px; /* Adjusted for logo height */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,24 +53,27 @@ header {
 }
 .nav-link:hover { color: var(--accent-gold); }
 
+/* Center Logo Image */
 .logo-center {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 1001;
 }
-.logo-text {
-    color: var(--accent-gold);
-    font-size: 24px;
-    font-weight: 600;
-    letter-spacing: 4px;
-    border-bottom: 1px solid var(--accent-gold);
-    padding-bottom: 5px;
-}
-.est-text { font-size: 10px; color: var(--accent-gold); margin-top: 5px; }
 
+.header-logo-img {
+    height: 60px; /* Adjust based on your logo shape */
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.header-logo-img:hover { transform: scale(1.05); }
+
+/* Order Button */
 .btn-order {
     background-color: var(--accent-gold);
     color: white;
@@ -146,6 +149,7 @@ header {
     position: relative;
 }
 
+/* Badge */
 .badge-circle {
     position: absolute;
     left: -75px;
@@ -254,7 +258,7 @@ header {
 }
 
 /* =========================================
-   4. NEW MENU SECTION
+   4. CHAI MENU SECTION
    ========================================= */
 .chai-menu-section {
     display: flex;
@@ -336,7 +340,6 @@ header {
     font-weight: 500;
 }
 .size-price { color: var(--text-white); font-weight: 700; margin-left: 5px; }
-
 
 /* =========================================
    5. REVIEWS SECTION
@@ -513,6 +516,7 @@ footer {
 }
 
 .footer-logo-large { text-align: center; margin-bottom: 40px; }
+.footer-logo-img { height: 100px; width: auto; }
 
 .footer-grid {
     display: grid;
@@ -550,6 +554,7 @@ footer {
 @media (max-width: 900px) {
     header { padding: 15px 20px; }
     .nav-left { display: none; }
+    .header-logo-img { height: 40px; }
     .journey-section, .loyalty-section { flex-direction: column; }
     .journey-text, .loyalty-content { padding: 40px 20px; }
     .watermark-text { font-size: 60px; top: 20px; }
