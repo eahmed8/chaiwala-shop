@@ -517,3 +517,47 @@ footer {
     .contact-section { flex-direction: column; }
     .about-arch-img { height: 350px; }
 }
+/* =========================================
+   FOOTER UPDATES (Centered Logo & Socials)
+   ========================================= */
+
+/* Ensure Logo is perfectly centered */
+.footer-logo-large {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Space between logo and icons */
+}
+
+/* Social Icons Container */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Space between icons */
+    margin-bottom: 50px; /* Space below icons before the links */
+}
+
+/* Individual Icons */
+.social-icons a {
+    color: var(--accent-gold);
+    font-size: 24px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    
+    /* Circle Border around icons (Optional, looks premium) */
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgba(197, 160, 101, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hover Effect */
+.social-icons a:hover {
+    background-color: var(--accent-gold);
+    color: var(--bg-dark); /* Icon turns dark green */
+    transform: translateY(-5px);
+    border-color: var(--accent-gold);
+}
