@@ -418,26 +418,60 @@ footer {
 .about-grid {
     display: flex;
     align-items: center;
-    gap: 60px;
+    gap: 80px; /* Increased gap for better layout */
     max-width: 1200px;
     margin: 80px auto;
     padding: 0 40px;
 }
+
 .about-grid.reverse { flex-direction: row-reverse; }
 
-.about-text h2 { font-size: 32px; margin-bottom: 20px; color: white; }
-.about-text p { color: var(--text-grey); margin-bottom: 25px; }
-
-.about-arch-img {
-    width: 100%;
-    max-width: 450px;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 250px 250px 0 0;
-    border: 1px solid var(--accent-gold);
-    padding: 10px;
+.about-text h2 { 
+    font-size: 36px; 
+    margin-bottom: 25px; 
+    color: white; 
+    letter-spacing: 2px;
 }
 
+.about-text p { 
+    color: var(--text-grey); 
+    margin-bottom: 25px; 
+    font-size: 18px; /* Slightly larger text for readability */
+    line-height: 1.8;
+}
+
+/* FIXED IMAGE STYLE: Full Visibility & Frame */
+.about-arch-img {
+    width: 100%;
+    min-width: 400px; /* Ensures it doesn't get too small */
+    height: 450px; /* Balanced rectangular height */
+    
+    /* This ensures the image isn't distorted but covers the area */
+    object-fit: cover; 
+    
+    /* The "Frame" Look */
+    border-radius: 20px; /* Soft rounded corners (Removed the Arch) */
+    border: 1px solid rgba(197, 160, 101, 0.5); /* Distinct Gold Border */
+    padding: 20px; /* The "Breathing Room" between image and border */
+    
+    /* Depth */
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4); 
+    background-color: rgba(255,255,255,0.02); /* Subtle glass effect background */
+}
+
+/* Mobile Responsive Fix for About Page */
+@media (max-width: 900px) {
+    .about-grid, .about-grid.reverse { 
+        flex-direction: column; 
+        gap: 40px;
+    }
+    
+    .about-arch-img { 
+        min-width: auto; 
+        width: 100%; 
+        height: 300px; 
+    }
+}
 /* Contact Page */
 .contact-section {
     display: flex;
