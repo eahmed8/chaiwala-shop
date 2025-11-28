@@ -89,32 +89,32 @@ header {
     transition: transform 0.3s;
 }
 .btn-order:hover { transform: scale(1.05); }
-
 /* =========================================
-   3. HERO / JOURNEY SECTION (Image Slot Version)
+   3. HERO / JOURNEY SECTION (Wider Image)
    ========================================= */
 .journey-section {
     display: flex;
     height: 85vh; 
     min-height: 600px;
-    padding-top: 100px;
+    padding-top: 100px; /* Space for header */
     position: relative;
     overflow: hidden;
 }
 
 .journey-text {
-    flex: 1;
-    padding: 60px 80px;
+    flex: 0.7; /* CHANGED: Reduced width (approx 35%) */
+    padding: 60px 60px; /* Adjusted padding */
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
     z-index: 2;
+    background-color: var(--bg-dark); /* Ensures text stays readable */
 }
 
 /* The Container for the Image Slot */
 .journey-image-container {
-    flex: 1;
+    flex: 1.3; /* CHANGED: Increased width (approx 65%) */
     position: relative;
     height: 100%;
 }
@@ -123,7 +123,8 @@ header {
 .journey-main-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Still covers, but shows much more width now */
+    object-position: center; /* Centers the focus */
     display: block;
 }
 
@@ -192,6 +193,13 @@ header {
     font-size: 10px;
 }
 
+/* Mobile Fix */
+@media (max-width: 900px) {
+    .journey-section { flex-direction: column; height: auto; }
+    .journey-image-container { height: 400px; width: 100%; flex: none; }
+    .journey-text { padding: 40px 20px; flex: none; }
+    .badge-circle { display: none; }
+}
 /* =========================================
    4. SERVICES & GALLERY (Tall Arch Restored)
    ========================================= */
