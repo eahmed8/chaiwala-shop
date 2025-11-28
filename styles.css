@@ -93,11 +93,11 @@ header {
 .btn-order:hover { transform: scale(1.05); }
 
 /* =========================================
-   3. HERO / JOURNEY SECTION (Balanced)
+   3. HERO / JOURNEY SECTION (Updated with Image Slot)
    ========================================= */
 .journey-section {
     display: flex;
-    /* Reduced from 100vh to 85vh to prevent giant images */
+    /* Balanced height so it fits on laptop screens */
     height: 85vh; 
     min-height: 600px;
     padding-top: 100px; /* Space for header */
@@ -115,12 +115,22 @@ header {
     z-index: 2;
 }
 
-.journey-image {
+/* The Container for the Image */
+.journey-image-container {
     flex: 1;
-    background: url('https://images.unsplash.com/photo-1596710629170-e69f64be2387?q=80&w=2000&auto=format&fit=crop') center/cover;
     position: relative;
+    height: 100%;
 }
 
+/* The Actual Image Styling */
+.journey-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the box without stretching */
+    display: block;
+}
+
+/* Watermark Text */
 .watermark-text {
     position: absolute;
     top: 5%;
@@ -155,9 +165,10 @@ header {
     margin-bottom: 30px;
 }
 
+/* The Floating Badge */
 .badge-circle {
     position: absolute;
-    left: -60px;
+    left: -60px; /* Pulls it over the text */
     top: 50%;
     transform: translateY(-50%);
     width: 120px;
@@ -171,6 +182,7 @@ header {
     box-shadow: 0 0 20px rgba(0,0,0,0.3);
     z-index: 10;
 }
+
 .badge-inner {
     width: 90%;
     height: 90%;
@@ -185,6 +197,12 @@ header {
     font-size: 10px;
 }
 
+/* Mobile Fix */
+@media (max-width: 900px) {
+    .journey-section { flex-direction: column; height: auto; }
+    .journey-image-container { height: 400px; width: 100%; }
+    .badge-circle { display: none; }
+}
 /* =========================================
    4. SERVICES & GALLERY (FIXED IMAGES)
    ========================================= */
