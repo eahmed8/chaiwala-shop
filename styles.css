@@ -203,60 +203,65 @@ header {
     .journey-image-container { height: 400px; width: 100%; }
     .badge-circle { display: none; }
 }
+
 /* =========================================
-   4. SERVICES & GALLERY (FIXED IMAGES)
+   4. CHAI MENU SECTION (FIXED: Framed & Equal Size)
    ========================================= */
-.section-container {
-    padding: 80px 50px;
-    text-align: center;
-}
-
-.section-title {
-    font-size: 36px;
-    color: white;
-    margin-bottom: 50px;
+.chai-menu-section {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    align-items: center; /* Vertically center the content */
+    background-color: #05221c;
+    min-height: 900px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding: 20px 0; /* Adds a little vertical spacing to the whole strip */
+}
+
+.chai-menu-img {
+    flex: 1; 
+    min-width: 400px;
+    
+    /* FIX: Image Settings */
+    height: 650px; /* Fixed height for consistency */
+    background: url('https://images.unsplash.com/photo-1556679343-c7306c1976bc?q=80&w=1000') center/cover;
+    
+    /* FIX: Breathing Room */
+    margin: 60px; /* This adds the space all around the image */
+    border-radius: 20px; /* Rounded corners for a premium look */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4); /* Nice drop shadow */
+    border: 1px solid rgba(197, 160, 101, 0.2); /* Subtle gold border */
+}
+
+.chai-menu-content {
+    flex: 1.2;
+    min-width: 500px;
+    padding: 60px 80px 60px 20px; /* Adjusted padding (less on left side near image) */
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 15px;
-}
-.diamond { color: var(--accent-gold); font-size: 20px; }
-
-.arch-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    max-width: 1300px;
-    margin: 0 auto;
 }
 
-.arch-card {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    border-radius: 150px 150px 0 0; /* Consistent Arch */
+/* (Keep existing Menu Text Styles) */
+.menu-category-title {
+    font-family: var(--font-heading);
+    font-size: 60px; 
+    color: var(--text-white);
+    margin-bottom: 60px; 
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    border-bottom: 3px solid var(--accent-gold);
+    display: inline-block;
+    width: fit-content;
 }
 
-/* FORCE CONSISTENT IMAGE SIZE */
-.arch-img {
-    width: 100%;
-    height: 320px; /* Fixed Height */
-    object-fit: cover; /* Crops image to fit */
-    display: block;
-    transition: transform 0.5s ease;
-    opacity: 0.9;
-}
-
-.arch-card:hover .arch-img {
-    transform: scale(1.05);
-    opacity: 1;
-}
-
-.arch-card h3 {
-    margin-top: 15px;
-    font-size: 18px;
-    color: var(--accent-gold);
-}
+.menu-item { margin-bottom: 50px; }
+.item-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 10px; }
+.item-name { font-family: var(--font-heading); font-size: 28px; color: var(--text-white); font-weight: 600; letter-spacing: 2px; }
+.dots { flex: 1; border-bottom: 3px dotted rgba(197, 160, 101, 0.4); margin: 0 20px; position: relative; top: -8px; }
+.item-base-price { font-family: var(--font-heading); font-size: 28px; color: var(--accent-gold); font-weight: 600; }
+.item-sizes { display: flex; gap: 40px; margin-left: 2px; }
+.size-option { font-family: var(--font-heading); font-size: 15px; color: #999; letter-spacing: 2px; font-weight: 500; }
+.size-price { color: var(--text-white); font-weight: 700; margin-left: 8px; font-size: 16px; }
 
 /* =========================================
    5. CHAI MENU SECTION (Fixed Layout)
@@ -348,20 +353,30 @@ header {
 }
 
 /* =========================================
-   6. LOYALTY SECTION (Fixed Sizing)
+   6. LOYALTY SECTION (FIXED: Framed & Equal Size)
    ========================================= */
 .loyalty-section {
     display: flex;
+    flex-wrap: wrap; /* Ensure it wraps on mobile */
+    align-items: center; /* Vertically center */
     background-color: #05221c;
-    /* Limit height so Samosa doesn't look giant */
-    max-height: 600px; 
-    overflow: hidden;
+    min-height: 800px; /* Consistent height */
+    padding: 20px 0;
 }
 
 .loyalty-img {
     flex: 1;
+    min-width: 400px;
+
+    /* FIX: Image Settings (Matches Menu Image) */
+    height: 650px; 
     background: url('https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=1000') center/cover;
-    min-height: 400px;
+    
+    /* FIX: Breathing Room */
+    margin: 60px; 
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    border: 1px solid rgba(197, 160, 101, 0.2);
 }
 
 .loyalty-content {
@@ -369,21 +384,45 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 60px 80px;
+    padding: 60px 80px 60px 20px;
 }
 
 .loyalty-content h2 {
-    font-size: 40px;
+    font-size: 50px; /* Increased font size */
     line-height: 1.2;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .loyalty-content p {
     color: var(--text-grey);
-    margin-bottom: 30px;
-    max-width: 450px;
+    font-size: 18px; /* Slightly bigger text */
+    margin-bottom: 40px;
+    max-width: 500px;
+    line-height: 1.8;
 }
 
+/* Mobile Responsive Adjustments */
+@media (max-width: 1100px) {
+    .chai-menu-section, .loyalty-section { flex-direction: column; height: auto; padding-top: 40px; }
+    
+    /* Make images standard rectangles on mobile */
+    .chai-menu-img, .loyalty-img { 
+        width: 90%; 
+        height: 350px; 
+        margin: 20px auto; /* Centered with less margin */
+        flex: none;
+    }
+    
+    .chai-menu-content, .loyalty-content { 
+        padding: 40px 25px; 
+        min-width: auto; 
+        text-align: center;
+        align-items: center; /* Center align text on mobile */
+    }
+    
+    .menu-category-title { font-size: 40px; margin-bottom: 40px; }
+    .loyalty-content h2 { font-size: 36px; }
+}
 /* =========================================
    7. REVIEWS & FOOTER
    ========================================= */
