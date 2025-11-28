@@ -256,20 +256,19 @@ header {
     margin-bottom: 30px;
     max-width: 500px;
 }
-
 /* =========================================
-   4. CHAI MENU SECTION (UPDATED - BIGGER)
+   4. CHAI MENU SECTION (SPACIOUS VERSION)
    ========================================= */
 .chai-menu-section {
     display: flex;
     flex-wrap: wrap;
     background-color: #05221c;
-    min-height: 100vh; /* Takes up full screen height */
+    min-height: 100vh;
     border-top: 1px solid rgba(255,255,255,0.05);
 }
 
 .chai-menu-img {
-    flex: 0.8; /* Image takes slightly less space */
+    flex: 0.8; 
     min-width: 400px;
     background: url('https://images.unsplash.com/photo-1556679343-c7306c1976bc?q=80&w=1000') center/cover;
     position: relative;
@@ -277,9 +276,10 @@ header {
 }
 
 .chai-menu-content {
-    flex: 1.2; /* Text section is WIDER now */
+    flex: 1.2;
     min-width: 500px;
-    padding: 100px 100px; /* More spacing */
+    /* Increased padding for more breathing room around the edges */
+    padding: 140px 120px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -287,9 +287,10 @@ header {
 
 .menu-category-title {
     font-family: var(--font-heading);
-    font-size: 80px; /* MUCH BIGGER TITLE */
+    font-size: 80px; 
     color: var(--text-white);
-    margin-bottom: 80px;
+    /* Increased space below title */
+    margin-bottom: 120px; 
     text-transform: uppercase;
     letter-spacing: 8px;
     border-bottom: 3px solid var(--accent-gold);
@@ -298,69 +299,72 @@ header {
 }
 
 .menu-item {
-    margin-bottom: 50px; /* More space between items */
+    /* Huge space between each Chai item */
+    margin-bottom: 100px; 
 }
 
 .item-header {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    margin-bottom: 15px;
+    margin-bottom: 25px; /* More space between Name and Sizes */
 }
 
 .item-name {
     font-family: var(--font-heading);
-    font-size: 32px; /* Bigger Item Names */
+    font-size: 36px; /* Slightly bigger */
     color: var(--text-white);
     font-weight: 600;
     white-space: nowrap;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 }
 
 .dots {
     flex: 1;
-    border-bottom: 3px dotted rgba(197, 160, 101, 0.4); /* Thicker dots */
-    margin: 0 20px;
+    border-bottom: 3px dotted rgba(197, 160, 101, 0.4);
+    margin: 0 30px; /* Wider gaps around dots */
     position: relative;
-    top: -8px;
+    top: -10px;
 }
 
 .item-base-price {
     font-family: var(--font-heading);
-    font-size: 32px; /* Bigger Price */
-    color: var(--accent-gold); /* Gold Color for Price */
+    font-size: 36px; 
+    color: var(--accent-gold);
     font-weight: 600;
 }
 
 .item-sizes {
     display: flex;
-    gap: 50px;
+    gap: 60px; /* More space between Regular and Large */
     margin-left: 5px;
+    margin-top: 15px; /* Explicit space above this row */
 }
 
 .size-option {
     font-family: var(--font-heading);
-    font-size: 16px; /* Bigger sub-text */
-    color: #999; /* Grey for labels */
-    letter-spacing: 2px;
+    font-size: 18px; 
+    color: #999; 
+    letter-spacing: 3px;
     font-weight: 500;
 }
 
 .size-price {
     color: var(--text-white);
     font-weight: 700;
-    margin-left: 8px;
-    font-size: 18px;
+    margin-left: 12px;
+    font-size: 20px;
 }
 
 /* Mobile Responsive Adjustments */
 @media (max-width: 1100px) {
     .chai-menu-section { flex-direction: column; }
     .chai-menu-img { height: 400px; flex: none; }
-    .chai-menu-content { padding: 60px 30px; min-width: auto; }
-    .menu-category-title { font-size: 50px; margin-bottom: 50px; }
+    .chai-menu-content { padding: 80px 30px; min-width: auto; }
+    .menu-category-title { font-size: 50px; margin-bottom: 60px; }
+    .menu-item { margin-bottom: 60px; }
     .item-name, .item-base-price { font-size: 24px; }
-    .item-sizes { gap: 20px; }
+    .item-sizes { gap: 30px; }
 }
 /* =========================================
    5. REVIEWS SECTION
