@@ -4,17 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chaiwala Shop | Authentic Chai & Street Food</title>
-    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Jost:wght@300;400;500;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    <!-- Add this line inside the <head> tag -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <!-- HEADER -->
     <header>
+        <!-- 1. Hamburger Icon (Visible only on Mobile) -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <!-- Desktop Navigation -->
         <nav class="nav-left">
             <a href="index.html" class="nav-link">HOME</a>
             <a href="about.html" class="nav-link">ABOUT</a>
@@ -22,44 +34,44 @@
         </nav>
 
         <div class="logo-center">
-            <!-- Ensure logo.png is in your folder -->
             <a href="index.html"><img src="TransparentChaiwala.png" alt="Chaiwala Shop" class="header-logo-img"></a>
         </div>
 
+        <!-- Primary CTA (Order Online) -->
         <a href="#" class="btn-order">ORDER ONLINE</a>
     </header>
 
-    <!-- HERO -->
-    <!-- 1. JOURNEY SECTION -->
+    <!-- 2. Mobile Dropdown Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-link" onclick="toggleMenu()">HOME</a>
+        <a href="about.html" class="mobile-link" onclick="toggleMenu()">ABOUT</a>
+        <a href="contact.html" class="mobile-link" onclick="toggleMenu()">CONTACT</a>
+        <a href="#" class="btn-order" style="display:inline-block; margin-top:20px;">ORDER ONLINE</a>
+    </div>
+
+    <!-- HERO SECTION -->
     <section class="journey-section">
-        
-        <!-- Left Side: Text -->
         <div class="journey-text">
             <div class="watermark-text">Chai Craft</div>
+            
             <p class="script-subtitle">For the best memories</p>
-            <h1 class="main-title">THE CHAIWALA <br> SHOP <br> JOURNEY</h1>
+            <h1 class="main-title">THE DECCAN <br> MORSELS <br> JOURNEY</h1>
             <p class="journey-desc">
-                Welcome to The Chaiwala Shop, a culinary gem dedicated to bringing the rich and diverse flavors of Hyderabad's native cuisine to your plate. Our menu is a testament to the vibrant culinary traditions of this historic city. It's more than just sustenance — it's an experience.
+                Welcome to Deccan Morsels, a culinary gem dedicated to bringing the rich and diverse flavors of Hyderabad's native cuisine to your plate. Our menu is a testament to the vibrant culinary traditions of this historic city.
             </p>
-            <a href="#" class="btn-order" style="display:inline-block; width:fit-content;">ORDER ONLINE</a>
+            <!-- UPDATED CTA: Context specific -->
+            <a href="#menu" class="btn-order">VIEW FULL MENU</a>
         </div>
 
-        <!-- Right Side: Image Slot -->
         <div class="journey-image-container">
-            <!-- PUT YOUR IMAGE HERE IN THE 'src' -->
-            <img src="new hero image.png" alt="Chai Journey" class="journey-main-img">
-            
-            <!-- Floating Badge -->
+            <img src="https://images.unsplash.com/photo-1596710629170-e69f64be2387?q=80&w=1000" alt="Chai Journey" class="journey-main-img">
             <div class="badge-circle">
-                <div class="badge-inner">
-                    CERTIFIED<br>HALAL FOOD
-                </div>
+                <div class="badge-inner">CERTIFIED<br>HALAL FOOD</div>
             </div>
         </div>
-
     </section>
 
-    <!-- SERVICES -->
+    <!-- SERVICES SECTION -->
     <section class="section-container">
         <h2 class="section-title">
             <span class="diamond">♢</span> OUR SERVICES <span class="diamond">♢</span>
@@ -67,30 +79,26 @@
         <div class="arch-grid">
             <div class="arch-card">
                 <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1000" class="arch-img" alt="Dine In">
-                <h3 style="margin-top:20px;">Dine-In</h3>
+                <h3>Dine-In</h3>
             </div>
             <div class="arch-card">
                 <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=1000" class="arch-img" alt="Pick Up">
-                <h3 style="margin-top:20px;">Pick Up</h3>
+                <h3>Pick Up</h3>
             </div>
             <div class="arch-card">
                 <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?q=80&w=1000" class="arch-img" alt="Catering">
-                <h3 style="margin-top:20px;">Catering</h3>
+                <h3>Catering</h3>
             </div>
         </div>
     </section>
 
     <!-- CHAI MENU SECTION -->
-    <section class="chai-menu-section">
-        
-        <!-- Left Image -->
+    <section id="menu" class="chai-menu-section">
         <div class="chai-menu-img"></div>
-        
-        <!-- Right Menu List -->
         <div class="chai-menu-content">
             <h2 class="menu-category-title">CHAI MENU</h2>
 
-            <!-- 1. MASALA CHAI -->
+            <!-- Item 1 -->
             <div class="menu-item">
                 <div class="item-header">
                     <span class="item-name">MASALA CHAI</span>
@@ -103,7 +111,7 @@
                 </div>
             </div>
 
-            <!-- 2. KADAK CHAI -->
+            <!-- Item 2 -->
             <div class="menu-item">
                 <div class="item-header">
                     <span class="item-name">KADAK CHAI</span>
@@ -116,20 +124,7 @@
                 </div>
             </div>
 
-            <!-- 3. SAFFRON CHAI -->
-            <div class="menu-item">
-                <div class="item-header">
-                    <span class="item-name">SAFFRON CHAI</span>
-                    <span class="dots"></span>
-                    <span class="item-base-price">$4.5</span>
-                </div>
-                <div class="item-sizes">
-                    <span class="size-option">REGULAR <span class="size-price">$4.5</span></span>
-                    <span class="size-option">LARGE <span class="size-price">$6.5</span></span>
-                </div>
-            </div>
-
-            <!-- 4. GINGER CHAI -->
+            <!-- Item 3 -->
             <div class="menu-item">
                 <div class="item-header">
                     <span class="item-name">GINGER CHAI</span>
@@ -141,60 +136,37 @@
                     <span class="size-option">LARGE <span class="size-price">$6.5</span></span>
                 </div>
             </div>
-
-            <!-- 5. CARDAMOM CHAI -->
-            <div class="menu-item">
-                <div class="item-header">
-                    <span class="item-name">CARDAMOM CHAI</span>
-                    <span class="dots"></span>
-                    <span class="item-base-price">$4.5</span>
-                </div>
-                <div class="item-sizes">
-                    <span class="size-option">REGULAR <span class="size-price">$4.5</span></span>
-                    <span class="size-option">LARGE <span class="size-price">$6.5</span></span>
-                </div>
-            </div>
-
-            <!-- 6. FENNEL CHAI -->
-            <div class="menu-item">
-                <div class="item-header">
-                    <span class="item-name">FENNEL CHAI</span>
-                    <span class="dots"></span>
-                    <span class="item-base-price">$4.5</span>
-                </div>
-                <div class="item-sizes">
-                    <span class="size-option">REGULAR <span class="size-price">$4.5</span></span>
-                    <span class="size-option">LARGE <span class="size-price">$6.5</span></span>
-                </div>
-            </div>
-
+            
+            <!-- (Add other items here if needed) -->
         </div>
     </section>
 
-    <!-- LOYALTY -->
+    <!-- LOYALTY SECTION -->
     <section class="loyalty-section">
         <div class="loyalty-img"></div>
         <div class="loyalty-content">
             <h2>EARN LOYALTY <br> REWARDS EVERY <br> TIME YOU ORDER</h2>
-            <p>Earn points every time you order from us, whether dining in or ordering online. Redeem your points for exclusive discounts.</p>
-            <a href="#" class="btn-order" style="display:inline-block; width:fit-content;">ORDER ONLINE</a>
+            <p>Earn points every time you order from us, whether dining in or ordering online. Redeem your points for exclusive discounts, free items, and special member perks.</p>
+            
+            <!-- UPDATED CTA: Context specific -->
+            <a href="#" class="btn-order">JOIN US</a>
         </div>
     </section>
 
-    <!-- GALLERY -->
+    <!-- GALLERY SECTION -->
     <section class="section-container">
         <h2 class="section-title">
             <span class="diamond">♢</span> OUR GALLERY <span class="diamond">♢</span>
         </h2>
         <div class="arch-grid">
             <div class="arch-card"><img src="https://images.unsplash.com/photo-1626132647523-66f5bf380027?q=80&w=1000" class="arch-img" alt="Samosa"></div>
-            <div class="arch-card"><img src="bun muska.jpeg" class="arch-img" alt="BunMuska"></div>
-            <div class="arch-card"><img src="pouring-tea-into-clay-cups.jpg" class="arch-img" alt="pouring tea in clay cups"></div>
+            <div class="arch-card"><img src="pouring-tea-into-clay-cups.jpg" class="arch-img" alt="pouring-tea-into-clay-cups"></div>
+            <div class="arch-card"><img src="bun muska.jpeg" class="arch-img" alt="Sandwich"></div>
             <div class="arch-card"><img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=1000" class="arch-img" alt="Drink"></div>
         </div>
     </section>
 
-    <!-- REVIEWS -->
+    <!-- REVIEWS SECTION -->
     <section class="testimonials-section">
         <h2 class="section-title">
             <span class="diamond">♢</span> CUSTOMER LOVE <span class="diamond">♢</span>
@@ -221,7 +193,7 @@
             <div class="review-card">
                 <div class="quote-icon">“</div>
                 <div class="stars">★★★★★</div>
-                <p class="review-text">"I come here every weekend for the Irani Chai. It's thick, creamy, and perfect."</p>
+                <p class="review-text">"I come here every weekend for the Irani Chai. It's thick, creamy, and perfect. The staff is always welcoming."</p>
                 <div class="reviewer-info">
                     <div class="reviewer-name">PRIYA S.</div>
                     <span class="reviewer-location">San Jose, CA</span>
@@ -230,23 +202,53 @@
         </div>
     </section>
 
-   <footer>
-        <!-- 1. Centered Logo -->
+    <!-- FOOTER -->
+    <footer>
         <div class="footer-logo-large">
             <img src="TransparentChaiwala.png" alt="Chaiwala Shop" class="footer-logo-img">
         </div>
-
-        <!-- 2. Social Media Icons -->
+        
         <div class="social-icons">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a> <!-- or X -->
+            <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
 
-        <!-- 3. Footer Links -->
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>EXPLORE</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>LOCATIONS</h4>
+                <ul><li><a href="#">Fremont, CA</a></li><li><a href="#">Sunnyvale, CA</a></li></ul>
+            </div>
+            <div class="footer-col">
+                <h4>TIMINGS</h4>
+                <ul><li><span style="color:#fff">11:00 AM - 11:00 PM</span></li></ul>
+            </div>
+        </div>
+
         <div class="copyright">
-            <p>The Chaiwala Shop | All rights reserved</p>
+            <p>Deccan Morsels | All rights reserved</p>
         </div>
     </footer>
+
+    <!-- JAVASCRIPT FOR MOBILE TOGGLE -->
+    <script>
+        function toggleMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        }
+    </script>
+
 </body>
 </html>

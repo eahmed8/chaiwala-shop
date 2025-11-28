@@ -569,3 +569,74 @@ footer {
     transform: translateY(-5px);
     border-color: var(--accent-gold);
 }
+/* =========================================
+   8. MOBILE HAMBURGER MENU STYLES
+   ========================================= */
+
+/* Hide Hamburger on Desktop */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1002; /* Above everything */
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--accent-gold);
+    transition: 0.3s;
+}
+
+/* Mobile Menu Container (Hidden by default) */
+.mobile-menu {
+    position: fixed;
+    top: -100%; /* Hidden above screen */
+    left: 0;
+    width: 100%;
+    background-color: rgba(7, 40, 33, 0.98); /* Deep Green */
+    padding: 100px 0 40px;
+    transition: 0.4s ease;
+    z-index: 999; /* Below header, above content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+.mobile-menu.active {
+    top: 0; /* Slide down */
+}
+
+.mobile-link {
+    color: var(--text-white);
+    font-family: var(--font-heading);
+    font-size: 20px;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.mobile-link:hover {
+    color: var(--accent-gold);
+}
+
+/* Hamburger Animation when active */
+.hamburger.active .bar:nth-child(2) { opacity: 0; }
+.hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+/* SHOW ON MOBILE */
+@media (max-width: 900px) {
+    .hamburger { display: flex; }
+    
+    /* Adjust header layout for mobile */
+    header { padding: 15px 30px; justify-content: space-between; }
+    
+    /* Hide the desktop Order button on mobile if it crowds the logo */
+    .btn-order { display: none; } 
+    
+    /* Show a smaller Order button inside the mobile menu instead? 
+       Or keep header clean. Let's add an order button inside the mobile menu. */
+}
