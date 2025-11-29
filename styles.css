@@ -510,15 +510,51 @@ footer {
    9. CONTACT PAGE (Green & Gold Theme)
    ========================================= */
 
-/* Hero Image */
+/* =========================================
+   9. CONTACT PAGE (Updated Header)
+   ========================================= */
+
+/* Hero Section - Solid Green (No Image) */
 .contact-hero {
-    height: 350px;
-    background: url('https://images.unsplash.com/photo-1544025162-d76690b68f11?q=80&w=1000') center/cover;
+    height: 300px; /* Compact & Clean */
+    background-color: var(--bg-dark); /* Deep Rainforest Green */
     display: flex;
+    flex-direction: column; /* Stack text vertically */
     align-items: center;
     justify-content: center;
-    position: relative;
     margin-top: 100px; /* Offset for fixed header */
+    padding: 0 20px;
+}
+
+/* Remove the dark overlay since we have a solid background now */
+.contact-hero::before { display: none; }
+
+/* The Cursive Subtitle (Matches "Our Heritage") */
+.hero-subtitle {
+    font-family: var(--font-script); /* Dancing Script */
+    color: #b0b0b0; /* Light Grey/White */
+    font-size: 32px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+/* The Main Gold Title (Matches "THE CHAIWALA STORY") */
+.hero-title {
+    font-family: var(--font-heading); /* Jost */
+    color: var(--accent-gold); /* Gold */
+    font-size: 56px;
+    font-weight: 700; /* Bold */
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: center;
+    line-height: 1.1;
+}
+
+/* Mobile Adjustment */
+@media (max-width: 900px) {
+    .contact-hero { height: 250px; }
+    .hero-subtitle { font-size: 24px; }
+    .hero-title { font-size: 36px; }
 }
 .contact-hero::before { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.5); }
 .contact-hero h1 { 
