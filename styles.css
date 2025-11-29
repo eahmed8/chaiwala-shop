@@ -506,24 +506,156 @@ footer {
         height: 300px; 
     }
 }
-/* Contact Page */
-.contact-section {
+/* =========================================
+   9. CONTACT PAGE (Urban Boba Stacked Layout)
+   ========================================= */
+
+/* Hero Image */
+.contact-hero {
+    height: 350px;
+    background: url('https://images.unsplash.com/photo-1544025162-d76690b68f11?q=80&w=1000') center/cover;
     display: flex;
-    max-width: 1200px;
-    margin: 50px auto 100px;
-    border: 1px solid rgba(197, 160, 101, 0.3);
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 100px; /* Offset for fixed header */
+}
+.contact-hero::before { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.5); }
+.contact-hero h1 { position: relative; z-index: 2; color: white; font-size: 36px; text-align: center; letter-spacing: 2px; }
+
+/* --- SECTION 1: CONTACT INFO (Green) --- */
+.contact-info-section {
+    background-color: var(--bg-dark); /* Deep Green */
+    padding: 80px 0;
+    color: white;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
-.contact-info, .contact-form { flex: 1; padding: 60px; }
-.contact-info { background-color: #05221c; border-right: 1px solid rgba(197, 160, 101, 0.3); }
+.info-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    gap: 60px; /* Space between Text and Map */
+    align-items: flex-start;
+}
 
-.info-item { margin-bottom: 40px; }
-.info-label { color: var(--accent-gold); font-size: 12px; letter-spacing: 2px; display: block; margin-bottom: 10px; font-weight: 600; }
-.info-value { color: white; font-size: 18px; font-family: var(--font-heading); }
+/* Left Column: Text Info */
+.info-text-side {
+    flex: 1;
+}
 
-.form-group { margin-bottom: 30px; }
-.dark-input { width: 100%; background-color: transparent; border: none; border-bottom: 1px solid #444; padding: 15px 0; color: white; font-family: var(--font-body); font-size: 15px; transition: all 0.3s; }
-.dark-input:focus { outline: none; border-bottom: 1px solid var(--accent-gold); }
+.info-text-side h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.info-block { margin-bottom: 30px; }
+
+.info-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    letter-spacing: 1.5px;
+    color: var(--accent-gold);
+}
+
+.info-text { font-size: 15px; line-height: 1.6; color: #e0e0e0; }
+
+/* Right Column: Map Image */
+.map-side {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.map-img {
+    width: 100%;
+    max-width: 500px;
+    height: 350px;
+    object-fit: cover;
+    border: 2px solid var(--accent-gold);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+/* --- SECTION 2: GET IN TOUCH (White) --- */
+.contact-form-section {
+    background-color: #ffffff;
+    padding: 80px 0;
+    color: #333;
+}
+
+.form-container {
+    max-width: 800px; /* Limits width so form isn't too wide */
+    margin: 0 auto; /* Centers the form */
+    padding: 0 40px;
+}
+
+.contact-form-section h2 {
+    font-size: 32px;
+    color: var(--bg-dark);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.form-intro {
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Beige Inputs */
+.beige-input {
+    width: 100%;
+    background-color: #E6D5C3; /* The Chai Beige */
+    border: none;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: #333;
+    transition: 0.3s;
+}
+
+.beige-input:focus {
+    outline: 2px solid var(--accent-gold);
+    background-color: #eee;
+}
+
+/* Form Buttons */
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.btn-form {
+    padding: 12px 30px;
+    font-family: var(--font-heading);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+}
+
+.btn-reset { background-color: #d49a6a; color: white; }
+.btn-submit { background-color: #9abf88; color: white; } /* Sage Green */
+
+/* Mobile Stack */
+@media (max-width: 900px) {
+    .info-container { flex-direction: column; }
+    .map-side { width: 100%; justify-content: flex-start; }
+    .map-img { height: 250px; width: 100%; }
+    .contact-form-section { padding: 60px 0; }
+}
 
 
 /* =========================================
