@@ -5,15 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Chaiwala Shop</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Jost:wght@300;400;500;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    <!-- Add this line inside the <head> tag -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+    <!-- HEADER -->
     <header>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
         <nav class="nav-left">
             <a href="index.html" class="nav-link">HOME</a>
             <a href="about.html" class="nav-link" style="color:var(--accent-gold)">ABOUT</a>
@@ -25,50 +31,99 @@
         <a href="#" class="btn-order">ORDER ONLINE</a>
     </header>
 
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" class="mobile-link" onclick="toggleMenu()">HOME</a>
+        <a href="about.html" class="mobile-link" onclick="toggleMenu()">ABOUT</a>
+        <a href="contact.html" class="mobile-link" onclick="toggleMenu()">CONTACT</a>
+        <a href="#" class="btn-order" style="display:inline-block; margin-top:20px;">ORDER ONLINE</a>
+    </div>
+
+    <!-- PAGE TITLE -->
     <section class="page-header-section">
         <p style="color:var(--text-grey); font-family:var(--font-script); font-size:30px;">Our Heritage</p>
         <h1 class="page-title-large">THE CHAIWALA STORY</h1>
     </section>
 
+    <!-- STORY SECTION 1 -->
     <section class="about-grid">
         <div class="about-text">
             <h2>ROOTED IN TRADITION</h2>
             <p>Inspired by the bustling streets of Hyderabad and the serene tea gardens of Assam, Chaiwala Shop was born out of a desire to bring authentic, high-quality chai to the modern world.</p>
-            <p>We believe that chai is not just a drink; it's a ritual. It's the pause in a busy day, the conversation starter, and the comfort of home. Every cup we brew is a tribute to the Chaiwala way of life.</p>
+            <p>We believe that chai is not just a drink; it's a ritual. It's the pause in a busy day, the conversation starter, and the comfort of home. Every cup we brew is a tribute to the Deccan way of life.</p>
         </div>
         <div class="about-img-container">
-            <img src="vecteezy_steaming-cup-of-aromatic-chai-tea-with-cardamom-pods-and_72849425.jpg" class="about-arch-img" alt="Pouring Chai">
+            <img src="https://images.unsplash.com/photo-1596710629170-e69f64be2387?q=80&w=1000" class="about-arch-img" alt="Pouring Chai">
         </div>
     </section>
 
+    <!-- STORY SECTION 2 (Reverse) -->
     <section class="about-grid reverse">
         <div class="about-text">
             <h2>CRAFTED FOR YOU</h2>
             <p>Our chefs use age-old recipes passed down through generations. From the slow-cooked Haleem to the crisp, buttery Osmania biscuits, we ensure every bite transports you back to the royal kitchens of the Nizams.</p>
         </div>
         <div class="about-img-container">
-            <img src="spicesch.jpg" class="about-arch-img" alt="Spices">
+            <img src="https://images.unsplash.com/photo-1567332267232-a5e12e11833c?q=80&w=1000" class="about-arch-img" alt="Spices">
         </div>
     </section>
 
+    <!-- LOYALTY SECTION (Moved Here) -->
+    <section class="loyalty-section">
+        <div class="loyalty-img"></div>
+        <div class="loyalty-content">
+            <h2>EARN LOYALTY <br> REWARDS EVERY <br> TIME YOU ORDER</h2>
+            <p>Earn points every time you order from us, whether dining in or ordering online. Redeem your points for exclusive discounts, free items, and special member perks.</p>
+            <a href="#" class="btn-order">JOIN US</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
-        <!-- 1. Centered Logo -->
         <div class="footer-logo-large">
             <img src="TransparentChaiwala.png" alt="Chaiwala Shop" class="footer-logo-img">
         </div>
-
-        <!-- 2. Social Media Icons -->
+        
         <div class="social-icons">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a> <!-- or X -->
+            <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
 
-        <!-- 3. Footer Links -->
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>EXPLORE</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="index.html#menu">Menu</a></li>
+                    <li><a href="index.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>LOCATIONS</h4>
+                <ul><li><a href="#">Fremont, CA</a></li><li><a href="#">Sunnyvale, CA</a></li></ul>
+            </div>
+            <div class="footer-col">
+                <h4>TIMINGS</h4>
+                <ul><li><span style="color:#fff">11:00 AM - 11:00 PM</span></li></ul>
+            </div>
+        </div>
+
         <div class="copyright">
             <p>The Chaiwala Shop | All rights reserved</p>
         </div>
     </footer>
+
+    <!-- Script for Menu -->
+    <script>
+        function toggleMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        }
+    </script>
 
 </body>
 </html>
