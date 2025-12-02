@@ -862,3 +862,137 @@ footer {
     /* Show a smaller Order button inside the mobile menu instead? 
        Or keep header clean. Let's add an order button inside the mobile menu. */
 }
+/* =========================================
+   10. ORDER & CHECKOUT PAGES
+   ========================================= */
+
+/* Order Page Layout */
+.order-section {
+    padding: 150px 50px 80px;
+    background-color: var(--bg-dark);
+}
+
+.menu-cat-title {
+    color: var(--accent-gold);
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: 3px;
+    font-family: var(--font-heading);
+}
+
+.order-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Menu Card */
+.order-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(197, 160, 101, 0.3);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+.order-card:hover { border-color: var(--accent-gold); transform: translateY(-5px); }
+
+.order-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.order-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.order-info h3 {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.order-info .price {
+    color: var(--accent-gold);
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.btn-add {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.btn-add:hover { background-color: var(--accent-gold); border-color: var(--accent-gold); }
+
+/* Checkout Page */
+.checkout-section {
+    padding: 150px 50px;
+    background-color: var(--bg-dark);
+    min-height: 100vh;
+}
+
+.checkout-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.order-summary, .checkout-form {
+    flex: 1;
+    min-width: 350px;
+    background: rgba(0,0,0,0.2);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.cart-table th { text-align: left; border-bottom: 1px solid #555; padding: 10px 0; color: var(--accent-gold); }
+.cart-table td { padding: 15px 0; border-bottom: 1px solid #333; }
+
+.btn-remove {
+    background: none; border: none; color: #ff6b6b; font-size: 20px; cursor: pointer;
+}
+
+.cart-total-box {
+    text-align: right;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Toast Notification */
+.toast-msg {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--accent-gold);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation: fadeIn 0.5s, fadeOut 0.5s 2.5s;
+    z-index: 2000;
+}
+
+@keyframes fadeIn { from {opacity: 0; transform: translateY(20px);} to {opacity: 1; transform: translateY(0);} }
+@keyframes fadeOut { from {opacity: 1;} to {opacity: 0;} }

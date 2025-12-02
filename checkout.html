@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Chaiwala Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo-center">
+            <a href="index.html"><img src="TransparentChaiwala.png" alt="Chaiwala Shop" class="header-logo-img"></a>
+        </div>
+        <a href="order.html" class="btn-order">ORDER ONLINE</a>
+
+    </header>
+
+    <section class="checkout-section">
+        <h1 class="page-title-large" style="text-align:center;">YOUR ORDER</h1>
+
+        <div class="checkout-container">
+            <!-- Order Summary -->
+            <div class="order-summary">
+                <h2>Cart Items</h2>
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Price</th>
+                            <th>Qty</th>
+                            <th>Total</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-table-body">
+                        <!-- Items injected by JS -->
+                    </tbody>
+                </table>
+                <div class="cart-total-box">
+                    <span>TOTAL:</span>
+                    <span id="cart-total">$0.00</span>
+                </div>
+            </div>
+
+            <!-- Simple Checkout Form -->
+            <div class="checkout-form">
+                <h2>Details</h2>
+                <form onsubmit="alert('Order Placed! Thank you.'); localStorage.removeItem('chaiCart'); window.location.href='index.html'; return false;">
+                    <input type="text" class="dark-mode-input" placeholder="Name" required>
+                    <input type="text" class="dark-mode-input" placeholder="Phone Number" required>
+                    <input type="text" class="dark-mode-input" placeholder="Pickup Time">
+                    <button type="submit" class="btn-order" style="width:100%; margin-top:20px;">PLACE ORDER</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

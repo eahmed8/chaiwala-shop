@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Online | Chaiwala Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Jost:wght@300;400;500;600;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+        </div>
+        <nav class="nav-left">
+            <a href="index.html" class="nav-link">HOME</a>
+            <a href="about.html" class="nav-link">ABOUT</a>
+            <a href="contact.html" class="nav-link">CONTACT</a>
+        </nav>
+        <div class="logo-center">
+            <a href="index.html"><img src="TransparentChaiwala.png" alt="Chaiwala Shop" class="header-logo-img"></a>
+        </div>
+        <!-- Changing CTA to Checkout for this page -->
+        <a href="order.html" class="btn-order">ORDER ONLINE</a>
+
+    </header>
+
+    <!-- MENU GRID -->
+    <section class="order-section">
+        <h1 class="page-title-large" style="text-align:center; margin-bottom: 60px;">ORDER MENU</h1>
+        
+        <!-- Chai Category -->
+        <h2 class="menu-cat-title">SIGNATURE CHAI</h2>
+        <div class="order-grid">
+            <!-- Item 1 -->
+            <div class="order-card">
+                <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?q=80&w=1000" alt="Masala Chai">
+                <div class="order-info">
+                    <h3>Masala Chai</h3>
+                    <p class="price">$4.50</p>
+                    <button class="btn-add" onclick="addToCart('Masala Chai', 4.50)">ADD +</button>
+                </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="order-card">
+                <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?q=80&w=1000" alt="Kadak Chai">
+                <div class="order-info">
+                    <h3>Kadak Chai</h3>
+                    <p class="price">$4.50</p>
+                    <button class="btn-add" onclick="addToCart('Kadak Chai', 4.50)">ADD +</button>
+                </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="order-card">
+                <img src="https://images.unsplash.com/photo-1544025162-d76690b68f11?q=80&w=1000" alt="Ginger Chai">
+                <div class="order-info">
+                    <h3>Ginger Chai</h3>
+                    <p class="price">$4.50</p>
+                    <button class="btn-add" onclick="addToCart('Ginger Chai', 4.50)">ADD +</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Snacks Category -->
+        <h2 class="menu-cat-title" style="margin-top:80px;">STREET SNACKS</h2>
+        <div class="order-grid">
+            <div class="order-card">
+                <img src="https://images.unsplash.com/photo-1626132647523-66f5bf380027?q=80&w=1000" alt="Samosa">
+                <div class="order-info">
+                    <h3>Crispy Samosa (2pcs)</h3>
+                    <p class="price">$5.00</p>
+                    <button class="btn-add" onclick="addToCart('Samosa (2pcs)', 5.00)">ADD +</button>
+                </div>
+            </div>
+            <div class="order-card">
+                <img src="https://images.unsplash.com/photo-1628294895950-98052523e036?q=80&w=1000" alt="Sandwich">
+                <div class="order-info">
+                    <h3>Bombay Sandwich</h3>
+                    <p class="price">$8.50</p>
+                    <button class="btn-add" onclick="addToCart('Bombay Sandwich', 8.50)">ADD +</button>
+                </div>
+            </div>
+            <div class="order-card">
+                <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=1000" alt="Maggi">
+                <div class="order-info">
+                    <h3>Masala Maggi</h3>
+                    <p class="price">$6.00</p>
+                    <button class="btn-add" onclick="addToCart('Masala Maggi', 6.00)">ADD +</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-logo-large"><img src="TransparentChaiwala.png" alt="Chaiwala Shop" class="footer-logo-img"></div>
+        <div class="copyright"><p>Deccan Morsels | All rights reserved</p></div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
