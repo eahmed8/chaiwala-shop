@@ -3,59 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout | Chaiwala Shop</title>
+    <title>Your Cart | Chaiwala Shop</title>
+    
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Jost:wght@300;400;500;600;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- HEADER -->
     <header>
+        <nav class="nav-left">
+            <a href="Index.html" class="nav-link">HOME</a>
+            <a href="order.html" class="nav-link">MENU</a>
+        </nav>
+
         <div class="logo-center">
             <a href="Index.html"><img src="newtransparentchaiwala logo.png" alt="Chaiwala Shop" class="header-logo-img"></a>
         </div>
-        <a href="checkout.html" class="btn-order">GO TO CHECKOUT</a>
+
+        <!-- Back Button -->
+        <a href="order.html" class="btn-order">ADD MORE ITEMS</a>
     </header>
 
+    <!-- CHECKOUT SECTION -->
     <section class="checkout-section">
-        <h1 class="page-title-large" style="text-align:center;">YOUR ORDER</h1>
+        <div class="page-header-section" style="padding-bottom: 20px;">
+            <p class="hero-subtitle">Review your Order</p>
+            <h1 class="page-title-large">YOUR CART</h1>
+        </div>
 
         <div class="checkout-container">
-            <!-- Order Summary -->
+            
+            <!-- 1. CART ITEMS TABLE -->
             <div class="order-summary">
-                <h2>Cart Items</h2>
-                <table class="cart-table">
-                    <thead>
-                        <tr>
-                            <th>Item</th>
-                            <th>Price</th>
-                            <th>Qty</th>
-                            <th>Total</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody id="cart-table-body">
-                        <!-- Items injected by JS -->
-                    </tbody>
-                </table>
+                <h2>ITEMS</h2>
+                <div class="table-responsive">
+                    <table class="cart-table">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Price</th>
+                                <th>Qty</th>
+                                <th>Total</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart-table-body">
+                            <!-- Items will be inserted here by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- Total Price Display -->
                 <div class="cart-total-box">
-                    <span>TOTAL:</span>
-                    <span id="cart-total">$0.00</span>
+                    <span>GRAND TOTAL:</span>
+                    <span id="cart-total" style="color:var(--accent-gold); font-size: 32px;">$0.00</span>
                 </div>
             </div>
 
-            <!-- Simple Checkout Form -->
-            <div class="checkout-form">
-                <h2>Details</h2>
-                <form onsubmit="alert('Order Placed! Thank you.'); localStorage.removeItem('chaiCart'); window.location.href='index.html'; return false;">
-                    <input type="text" class="dark-mode-input" placeholder="Name" required>
-                    <input type="text" class="dark-mode-input" placeholder="Phone Number" required>
-                    <input type="text" class="dark-mode-input" placeholder="Pickup Time">
-                    <button type="submit" class="btn-order" style="width:100%; margin-top:20px;">PLACE ORDER</button>
+            <!-- 2. CHECKOUT FORM -->
+            <div class="checkout-form-wrapper">
+                <h2>PICKUP DETAILS</h2>
+                <form onsubmit="event.preventDefault(); alert('Order Placed Successfully!'); localStorage.removeItem('chaiCart'); window.location.href='index.html';">
+                    
+                    <div class="form-group">
+                        <label style="color:white; font-size:12px; letter-spacing:1px;">NAME</label>
+                        <input type="text" class="dark-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label style="color:white; font-size:12px; letter-spacing:1px;">PHONE NUMBER</label>
+                        <input type="tel" class="dark-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label style="color:white; font-size:12px; letter-spacing:1px;">PICKUP TIME</label>
+                        <select class="dark-input" style="color:white;">
+                            <option style="color:black;">ASAP (15-20 mins)</option>
+                            <option style="color:black;">In 1 Hour</option>
+                            <option style="color:black;">In 2 Hours</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-order" style="width:100%; text-align:center; margin-top:20px;">CONFIRM & PAY</button>
                 </form>
             </div>
+
         </div>
     </section>
 
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-logo-large">
+            <img src="newtransparentchaiwala logo.png" alt="Chaiwala Shop" class="footer-logo-img">
+        </div>
+        <div class="copyright">
+            <p>Deccan Morsels | All rights reserved</p>
+        </div>
+    </footer>
+
+    <!-- Link the Script so the cart works -->
     <script src="script.js"></script>
+
 </body>
 </html>
