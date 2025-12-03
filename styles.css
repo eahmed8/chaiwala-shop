@@ -1086,3 +1086,71 @@ footer {
     .checkout-container { flex-direction: column; }
     .cart-table th, .cart-table td { font-size: 13px; }
 }
+/* =========================================
+   FLOATING CART BAR STYLES (Fix)
+   ========================================= */
+
+.floating-cart-bar {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    /* Centers the bar horizontally */
+    transform: translateX(-50%) translateY(100px); /* Start hidden below screen */
+    
+    width: 90%;
+    max-width: 450px;
+    
+    /* Design */
+    background-color: var(--accent-gold); 
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    
+    /* Layout */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    /* Shadow & Layering */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    z-index: 9999; /* Ensures it floats above everything */
+    text-decoration: none;
+    font-family: var(--font-heading);
+    
+    /* Smooth Animation */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 0; /* Invisible by default */
+    pointer-events: none; /* Can't click when hidden */
+}
+
+/* This class is added by JavaScript when you add an item */
+.floating-cart-bar.active {
+    transform: translateX(-50%) translateY(0); /* Slide up into view */
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* The small white number badge */
+.cart-count-badge {
+    background-color: white;
+    color: var(--bg-dark);
+    font-weight: 800;
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-right: 12px;
+    font-size: 14px;
+}
+
+/* "VIEW CART" Text */
+.cart-text {
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+/* Total Price on the right */
+.cart-total-preview {
+    font-weight: 700;
+    font-size: 18px;
+}
