@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Online | Chaiwala Shop</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- NOTE: Make sure your CSS file is named styles.css -->
+    <link rel="stylesheet" href="styles.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Jost:wght@300;400;500;600;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 </head>
@@ -23,9 +24,9 @@
         <div class="logo-center">
             <a href="Index.html"><img src="newtransparentchaiwala logo.png" alt="Chaiwala Shop" class="header-logo-img"></a>
         </div>
-        <!-- Changing CTA to Checkout for this page -->
-        <a href="order.html" class="btn-order">ORDER ONLINE</a>
-
+        
+        <!-- FIX 1: Linked this to checkout.html -->
+        <a href="checkout.html" class="btn-order">GO TO CHECKOUT</a>
     </header>
 
     <!-- MENU GRID -->
@@ -93,6 +94,15 @@
             </div>
         </div>
     </section>
+
+    <!-- FIX 2: THIS WAS MISSING! The Floating Bar -->
+    <a href="checkout.html" id="floating-bar" class="floating-cart-bar">
+        <div>
+            <span id="float-count" class="cart-count-badge">0</span>
+            <span class="cart-text">VIEW CART</span>
+        </div>
+        <span id="float-total" class="cart-total-preview">$0.00</span>
+    </a>
 
     <!-- FOOTER -->
     <footer>
